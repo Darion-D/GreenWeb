@@ -32,6 +32,8 @@ const Main  = (props) => {
                 websites are compared to other tested websites.
             </p>
             {displayPage === 'form page' ? <Calculator updateData={updateData} setDisplay={setDisplayPage}/> : <ShowData />}
+
+            
         </Container>
         </Section>
     )

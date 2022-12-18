@@ -31,7 +31,7 @@ const Main  = (props) => {
                 of the global aviation industry! Here you can compare how green your favorite 
                 websites are compared to other tested websites.
             </p>
-            {displayPage === 'form page' ? <Calculator updateData={updateData} setDisplay={setDisplayPage}/> : <ShowData />}
+            {displayPage === 'form page' ? <Calculator updateData={updateData} setDisplay={setDisplayPage}/> : <ShowData setDisplay={setDisplayPage}/>}
         </Container>
         </Section>
     )

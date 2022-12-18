@@ -13,12 +13,12 @@ import { useEffect, useState, useCallback } from "react";
       setIsPending(true)
       setData(null)
       setError(null)
-      await fetch(URL + query)
+      await fetch(URL + query, {options: { mode: 'no-cors'} })
         .then((response) => response.json())
         .then((response) => setData(response))
         .catch((err) => setError(err))
         .finally(() => setIsPending(false))
-    }, [query, data, error, isPending])
+    }, [query])
   
     useEffect(() => {
       
